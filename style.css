@@ -21,10 +21,12 @@ body {
 
 /*Header*/
 
-header {
+.header {
   background-color: #2d303a;
-  height: 89px;
   border-bottom: 6px solid #323746;
+  display: flex;
+  justify-content: space-between;
+  padding: 29px 40px 35px 40px;
 }
 
 .logo {
@@ -34,6 +36,8 @@ header {
   line-height: 30px;
   letter-spacing: -0.03em;
   color: white;
+  margin: 0;
+  max-height: 25px;
 }
 
 .logo_colored {
@@ -49,8 +53,33 @@ header {
   letter-spacing: -0.035em;
 }
 
-.navigation ul li {
+.navigation-list {
+  width: 375px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  margin-top: 14px;
+  padding: 0;
+  align-items: center;
+}
+
+.navigation-list li {
+  margin-right: 35px;
+  margin: 0;
+  padding: 0;
   display: inline-block;
+}
+
+.navigation-list li:hover {
+  cursor: pointer;
+  color: tomato;
+}
+
+.circle {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: white;
 }
 
 /*Slider*/
