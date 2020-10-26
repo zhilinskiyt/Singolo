@@ -1,14 +1,110 @@
 /* Font-family styles */
 @font-face {
-  font-family: Lato;
-  src: url(src/fonts/Lato-Light.ttf);
+  font-family: lato-black;
+  src: url(src/fonts/lato-black.ttf);
   font-weight: normal;
 }
 
 @font-face {
-  font-family: Lato-Bold;
-  src: url(src/fonts/Lato-Bold.ttf);
-  font-weight: bold;
+  font-family: lato-blackitalic;
+  src: url(src/fonts/lato-blackitalic.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: lato-bold;
+  src: url(src/fonts/lato-bold.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: lato-bolditalic;
+  src: url(src/fonts/lato-bolditalic.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: lato-hairline;
+  src: url(src/fonts/lato-hairline.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: lato-hairlineitalic;
+  src: url(src/fonts/lato-hairlineitalic.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: lato-heavy;
+  src: url(src/fonts/lato-heavy.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: lato-heavyitalic;
+  src: url(src/fonts/lato-heavyitalicttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: lato-italic;
+  src: url(src/fonts/lato-italic.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: lato-light;
+  src: url(src/fonts/lato-light.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: lato-lightitalic;
+  src: url(src/fonts/lato-lightitalic.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: lato-medium;
+  src: url(src/fonts/lato-medium.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: lato-black;
+  src: url(src/fonts/lato-mediumitalic.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: lato-regular;
+  src: url(src/fonts/lato-regularttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: lato-semibold;
+  src: url(src/fonts/lato-semibold.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: lato-semibolditalic;
+  src: url(src/fonts/lato-semibold.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: lato-thin;
+  src: url(src/fonts/lato-thin.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: lato-thinitalic;
+  src: url(src/fonts/lato-thinitalic.ttf);
+  font-weight: normal;
 }
 
 /* Styles for all document */
@@ -16,7 +112,7 @@
 body {
   max-width: 1020px;
   margin: auto;
-  font-family: Lato;
+  font-family: lato-light;
 }
 
 /*Header*/
@@ -111,6 +207,14 @@ body {
   width: 100%;
 }
 
+.arrow-left:hover {
+  cursor: pointer;
+}
+
+.arrow-right:hover {
+  cursor: pointer;
+}
+
 /*Services*/
 
 .services {
@@ -127,21 +231,24 @@ body {
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
+  color: #666d89;
 }
 
 .services-text {
-  padding: 18px 40px 0 40px;
+  padding: 0px 40px 0 40px;
   margin: 0;
   font-weight: 300;
   font-size: 18px;
   line-height: 30px;
+  color: #767e9e;
 }
 
 .services-types {
-  padding: 60px 40px 46px 0px;
+  padding: 30px 40px 46px 0px;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
+  color: #666d89;
 }
 
 .services-types li {
@@ -149,6 +256,7 @@ body {
   max-width: 286px;
   margin: 0;
   padding: 0;
+  color: #767e9e;
 }
 
 .services-types li::before {
@@ -224,10 +332,11 @@ body {
 }
 
 .portfolio_types li {
+  padding: 4px;
   margin: 0 10px 0 0;
   display: inline;
   border: 1px solid #767e9e;
-  border-radius: 2px;
+  border-radius: 8px;
   color: #767e9e;
   font-weight: 400;
   font-size: 12px;
@@ -237,6 +346,8 @@ body {
 .portfolio_types li:hover {
   cursor: pointer;
   color: white;
+  background-color: #f06c64;
+  font-size: 16px;
 }
 
 .portfolio_images {
@@ -247,13 +358,15 @@ body {
 }
 
 .portfolio_images li {
+  display: flex;
   padding: 0;
   margin: 20px;
-  display: block;
+  max-width: 200px;
   list-style-type: none;
-  background-color: white;
-  width: 200px;
-  height: 187px;
+}
+
+.portfolio-12 ~ li {
+  display: none;
 }
 
 /*Footer*/
@@ -272,10 +385,6 @@ body {
   color: #666d89;
 }
 
-.copyright::before {
-  content: " \00A9";
-}
-
 .follow_blocks {
   display: inline-block;
   margin: 0;
@@ -292,18 +401,24 @@ body {
   background-position: center;
 }
 
+.follow_blocks li:hover {
+  cursor: pointer;
+  border: #f06c64 5px solid;
+  box-shadow: #f06c64 2px 2px 2px 2px;
+}
+
 .facebook {
-  background: url(/styles/facebook.svg);
+  background: url(/src/image/facebook.svg);
 }
 
 .google {
-  background: url(/styles/google.svg);
+  background: url(/src/image/google.svg);
 }
 
 .twiter {
-  background: url(/styles/twiter.svg);
+  background: url(/src/image/twiter.svg);
 }
 
 .in {
-  background: url(/styles/in.svg);
+  background: url(/src/image/in.svg);
 }
