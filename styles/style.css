@@ -86,6 +86,7 @@ body {
 
 .slider {
   position: relative;
+  display: flex;
   margin: 0;
   padding: 0;
   background-color: #f06c64;
@@ -94,20 +95,7 @@ body {
 
 .arrow-sliders {
   display: flex;
-  justify-content: space-between;
-  padding: 283px 3.92% 284px 3.92%;
-}
-
-.phones {
-  position: absolute;
-  display: inline-block;
-  width: 100%;
-}
-
-.phone-verticale-red {
-  display: inline-block;
-  background-color: white;
-  width: 100%;
+  padding: 0 20px;
 }
 
 .phones {
@@ -119,8 +107,7 @@ body {
   list-style-type: none;
 }
 
-.phone-vertical-dispaly {
-  display: inline-block;
+.phones li img {
   width: 100%;
 }
 
