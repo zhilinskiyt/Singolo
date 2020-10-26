@@ -244,7 +244,7 @@ body {
 }
 
 .services-types {
-  padding: 30px 40px 46px 0px;
+  padding: 30px 40px 46px 40px;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
@@ -252,24 +252,27 @@ body {
 }
 
 .services-types li {
-  display: block;
-  max-width: 286px;
+  max-width: 200px;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 100px;
   color: #767e9e;
+  position: relative;
+  list-style-type: none;
 }
 
 .services-types li::before {
   content: "";
-  float: left;
+  position: absolute;
   display: block;
+  top: 6px;
+  left: 0;
   background-repeat: no-repeat;
   background-position: center;
   width: 60px;
   height: 60px;
   border: 2px solid #666d89;
   border-radius: 50%;
-  margin: 40px 20px 40px 40px;
+  margin: 20px;
   background-repeat: no-repeat;
   background-position: center;
 }
