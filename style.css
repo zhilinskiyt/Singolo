@@ -387,4 +387,11 @@ body {
 .in {
   background: url(/src/image/in.svg); }
 
+@media (min-width: 320px) and (max-width: 768px) {
+  .red {
+    height: 200px; }
+
+  .blue {
+    height: 200px; } }
+
 /*# sourceMappingURL=style.css.map */
