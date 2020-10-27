@@ -182,7 +182,7 @@ body {
 /*Slider*/
 .slider {
   position: relative;
-  border-bottom: 6px solid black;
+  border-bottom: 6px solid #ea676b;
 }
 .phones {
   display: flex;
@@ -216,14 +216,23 @@ body {
 
 .arrow-sliders {
   position: absolute;
-  width: 100%;
- display: flex;
- justify-content: space-between;
- top: calc((100% - 27px) / 2);
- margin: 0;
- z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  top: calc((100% - 27px) / 2);
+  width: 1020px;
+  margin: 0;
+  z-index: 3;
 }
 
+.arrow-left {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.arrow-right {
+  display: inline-block;
+  margin-right: 40px;
+}
 
 /*Services*/
 
