@@ -1,3 +1,11 @@
+$breakpoint-mobile: 375px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1020px;
+
+$slider-mobile-heihgt: 218px;
+$slider-tablet-height: 447px;
+$slider-desktop: 594px;
+
 /* Font-family styles */
 @font-face {
   font-family: lato-black;
@@ -184,6 +192,7 @@ body {
   position: relative;
   border-bottom: 6px solid #ea676b;
 }
+
 .phones {
   display: flex;
   padding: 0;
@@ -195,11 +204,10 @@ body {
   list-style: none;
   background: url(/src/image/red.png);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-color: #f06c64;
   background-repeat: no-repeat;
-  height: 100px;
   width: 100%;
-  height: 594px;
 }
 
 .blue {
@@ -207,11 +215,10 @@ body {
   list-style: none;
   background: url(/src/image/blue.png);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-color: #648bf0;
   background-repeat: no-repeat;
-  height: 100px;
   width: 100%;
-  height: 594px;
 }
 
 .arrow-sliders {
@@ -219,19 +226,19 @@ body {
   display: flex;
   justify-content: space-between;
   top: calc((100% - 27px) / 2);
-  width: 1020px;
+  width: 100%;
   margin: 0;
   z-index: 3;
 }
 
 .arrow-left {
   display: inline-block;
-  margin-left: 40px;
+  margin: 0 3.92%;
 }
 
 .arrow-right {
   display: inline-block;
-  margin-right: 40px;
+  margin: 0 3.92%;
 }
 
 /*Services*/
@@ -445,12 +452,23 @@ body {
   background: url(/src/image/in.svg);
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
-  .red {
-    height: 200px;
+/*Mobile*/
+@media (max-width: $breakpoint-mobile) {
+  .phones {
+    height: $breakpoint-mobile;
   }
-  
-  .blue {
-  height: 200px;
+}
+
+/*Tablet*/
+@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+  .phones {
+    height: $slider-tablet-height;
+  }
+}
+
+/*Desktop*/
+@media (min-width: $breakpoint-tablet) {
+  .phones {
+    height: $slider-desktop;
   }
 }
