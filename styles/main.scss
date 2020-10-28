@@ -131,7 +131,7 @@ body {
   border-bottom: 6px solid #323746;
   display: flex;
   justify-content: space-between;
-  padding: 29px 40px 35px 40px;
+  padding: 2.8% 4% 3.5% 4%;
 }
 
 .logo {
@@ -156,10 +156,10 @@ body {
   line-height: 14px;
   font-weight: bold;
   letter-spacing: -0.035em;
+  width: 37%;
 }
 
 .navigation-list {
-  width: 375px;
   display: flex;
   justify-content: space-around;
   margin: 0;
@@ -172,7 +172,7 @@ body {
   margin-right: 35px;
   margin: 0;
   padding: 0;
-  display: inline-block;
+  list-style-type: none;
 }
 
 .navigation-list li:hover {
@@ -251,8 +251,8 @@ body {
 }
 
 .services-title {
-  padding: 59px 0px 18px 40px;
-  margin: 0;
+  padding: 59px 0px 0px 40px;
+  margin: 0 0 18px 0;
   height: 36px;
   font-weight: 900;
   font-size: 30px;
@@ -262,7 +262,7 @@ body {
 
 .services-text {
   padding: 0px 40px 0 40px;
-  margin: 0;
+  margin: 18px 0 0 0;
   font-weight: 300;
   font-size: 18px;
   line-height: 30px;
@@ -270,7 +270,7 @@ body {
 }
 
 .services-types {
-  padding: 30px 40px 46px 40px;
+  padding: 4%;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
@@ -278,7 +278,6 @@ body {
 }
 
 .services-types li {
-  max-width: 200px;
   margin: 0;
   padding: 0 0 0 100px;
   color: #767e9e;
@@ -290,17 +289,15 @@ body {
   content: "";
   position: absolute;
   display: block;
-  top: 6px;
+  top: 15px;
   left: 0;
   background-repeat: no-repeat;
   background-position: center;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border: 2px solid #666d89;
   border-radius: 50%;
   margin: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .design::before {
@@ -353,6 +350,8 @@ body {
 }
 
 .portfolio_types {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 10px 0 18px 41px;
   font-weight: 400;
@@ -390,7 +389,6 @@ body {
   display: flex;
   padding: 0;
   margin: 20px;
-  max-width: 200px;
   list-style-type: none;
 }
 
@@ -454,15 +452,75 @@ body {
 
 /*Mobile*/
 @media (max-width: $breakpoint-mobile) {
+  /*Header*/
+
+  /*Slider*/
   .phones {
     height: $breakpoint-mobile;
+  }
+
+  .services-types li {
+    max-width: 51%;
+  }
+
+  /*Portfolio*/
+  .portfolio_images li {
+    margin: 2%;
+    width: 46%;
+  }
+
+  .portfolio_images {
+    padding: 0 2% 6% 2%;
+  }
+
+  /*footer*/
+  .copyright {
+    display: none;
   }
 }
 
 /*Tablet*/
 @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+  /*Tablet*/
+  .navigation {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .circle {
+    margin: 5px;
+  }
+
+  .logo {
+    display: inline-block;
+  }
+
+  /*Slider*/
   .phones {
     height: $slider-tablet-height;
+  }
+
+  /*Services*/
+  .services-types li {
+    width: 29%;
+    padding: 0 0 0 15%;
+  }
+
+  .services-types li::before {
+    top: 10%;
+    left: -5%;
+    width: 20%;
+  }
+
+  /*Portfolio*/
+
+  .portfolio_images li {
+    margin: 2%;
+    width: 29%;
+  }
+
+  .portfolio_images {
+    padding: 0 2% 6% 2%;
   }
 }
 
@@ -470,5 +528,20 @@ body {
 @media (min-width: $breakpoint-tablet) {
   .phones {
     height: $slider-desktop;
+  }
+
+  .services-types li {
+    width: 18%;
+  }
+
+  /*Portfolio*/
+
+  .portfolio_images li {
+    margin: 2%;
+    width: 20%;
+  }
+
+  .portfolio_images {
+    padding: 0 2% 6% 2%;
   }
 }
