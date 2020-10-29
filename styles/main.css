@@ -443,7 +443,9 @@ body {
 
   .burger-menu li:hover {
     width: 250px;
-    height: 812px; }
+    height: 812px;
+    -webkit-transition-duration: .6s;
+            transition-duration: .6s; }
 
   .burger-menu-navigation a:hover {
     color: #ea676b; }

@@ -515,6 +515,7 @@ body {
   .burger-menu li:hover {
     width: 250px;
     height: 812px;
+    transition-duration: .6s;
   }
 
   .burger-menu-navigation a:hover {
