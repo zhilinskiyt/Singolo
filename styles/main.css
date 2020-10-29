@@ -90,6 +90,15 @@ body {
           justify-content: space-between;
   padding: 2.8% 4% 3.5% 4%; }
 
+.burger-menu {
+  position: relative;
+  background: url(/src/image/threelines.svg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px; }
+
 .logo {
   font-weight: bold;
   text-transform: uppercase;
@@ -109,8 +118,7 @@ body {
   font-size: 12px;
   line-height: 14px;
   font-weight: bold;
-  letter-spacing: -0.035em;
-  width: 37%; }
+  letter-spacing: -0.035em; }
 
 .navigation-list {
   display: -webkit-box;
@@ -139,7 +147,8 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: white; }
+  background-color: white;
+  margin: 10px; }
 
 /*Slider*/
 .slider {
@@ -389,6 +398,23 @@ body {
 /*Mobile*/
 @media (max-width: 375px) {
   /*Header*/
+  .header {
+    display: block; }
+
+  .logo {
+    position: absolute;
+    margin-top: 3px;
+    padding-left: 0;
+    display: inline-block; }
+
+  .burger-menu {
+    display: inline-block;
+    cursor: pointer;
+    position: relative; }
+
+  .navigation {
+    display: none; }
+
   /*Slider*/
   .phones {
     height: 375px; }
@@ -410,19 +436,25 @@ body {
 /*Tablet*/
 @media (min-width: 375px) and (max-width: 768px) {
   /*Tablet*/
-  .navigation {
+  /*****Header*****/
+  .burger-menu {
+    display: none; }
+
+  .header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
 
-  .circle {
-    margin: 5px; }
+  .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
   .logo {
-    display: inline-block; }
+    display: inline-block;
+    position: relative; }
 
   /*Slider*/
   .phones {
@@ -447,9 +479,15 @@ body {
     padding: 0 2% 6% 2%; } }
 /*Desktop*/
 @media (min-width: 768px) {
+  /****Header*****/
+  .burger-menu {
+    display: none; }
+
+  /*****Slider*****/
   .phones {
     height: 594px; }
 
+  /***Services***/
   .services-types li {
     width: 18%; }
 

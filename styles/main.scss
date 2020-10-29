@@ -134,6 +134,16 @@ body {
   padding: 2.8% 4% 3.5% 4%;
 }
 
+.burger-menu {
+  position: relative;
+  background: url(/src/image/threelines.svg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+}
+
 .logo {
   font-weight: bold;
   text-transform: uppercase;
@@ -156,7 +166,6 @@ body {
   line-height: 14px;
   font-weight: bold;
   letter-spacing: -0.035em;
-  width: 37%;
 }
 
 .navigation-list {
@@ -185,6 +194,7 @@ body {
   height: 4px;
   border-radius: 50%;
   background-color: white;
+  margin: 10px;
 }
 
 /*Slider*/
@@ -453,6 +463,27 @@ body {
 /*Mobile*/
 @media (max-width: $breakpoint-mobile) {
   /*Header*/
+  .header {
+    display: block;
+  }
+
+  .logo {
+    position: absolute;
+
+    margin-top: 3px;
+    padding-left: 0;
+    display: inline-block;
+  }
+
+  .burger-menu {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .navigation {
+    display: none;
+  }
 
   /*Slider*/
   .phones {
@@ -482,17 +513,23 @@ body {
 /*Tablet*/
 @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
   /*Tablet*/
-  .navigation {
-    display: flex;
-    justify-content: flex-end;
+  /*****Header*****/
+  .burger-menu {
+    display: none;
   }
 
-  .circle {
-    margin: 5px;
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .navigation {
+    display: flex;
   }
 
   .logo {
     display: inline-block;
+    position: relative;
   }
 
   /*Slider*/
@@ -526,10 +563,17 @@ body {
 
 /*Desktop*/
 @media (min-width: $breakpoint-tablet) {
+  /****Header*****/
+  .burger-menu {
+    display: none;
+  }
+
+  /*****Slider*****/
   .phones {
     height: $slider-desktop;
   }
 
+  /***Services***/
   .services-types li {
     width: 18%;
   }
