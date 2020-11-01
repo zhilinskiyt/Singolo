@@ -621,5 +621,16 @@ body {
 
   .copyright {
     display: none; } }
+.red-hide {
+  display: none; }
+
+.blue-open {
+  display: block; }
+
+.red-open {
+  display: block; }
+
+.blue-hidden {
+  display: none; }
 
 /*# sourceMappingURL=main.css.map */
