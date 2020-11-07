@@ -39,9 +39,9 @@
 
     <section class="slider">
       <div class="wrapper-slider">
-        <ul class="phones">
-          <li class="red" id="red-hide"></li>
-          <li class="blue"></li>
+        <ul id="phone-slider" class="phones">
+          <li class="red slide active"></li>
+          <li class="blue slide"></li>
         </ul>
         <div class="arrow-sliders">
           <button class="arrow-left"></button>
@@ -193,16 +193,3 @@
     </footer>
   </body>
 </html>
-
-<script>
-  const red = document.querySelector(".red");
-  const blue = document.querySelector(".blue");
-  const arrowLeft = document.querySelector(".arrow-left");
-  const arrowRight = document.querySelector(".arrow-right");
-
-  arrowLeft.addEventListener("click", () => {
-    red.classList.add("red-hide");
-    blue.classList.add("blue-open");
-  });
-</script>
--->

@@ -295,7 +295,7 @@ body {
 }
 
 .red {
-  display: block;
+  display: none;
   list-style: none;
   background: url(/src/image/red.png);
   background-position: center;
@@ -704,18 +704,6 @@ body {
 }
 
 //***css for js***//
-.red-hide {
-  display: none;
-}
-
-.blue-open {
+.active {
   display: block;
-}
-
-.red-open {
-  display: block;
-}
-
-.blue-hidden {
-  display: none;
 }
